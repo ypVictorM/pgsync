@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Se mettre sur pgsync.rb pour debug
+            "type": "rdbg",
+            "name": "Debug current file with rdbg",
+            "request": "launch",
+            "script": "${file}",
+            "args": [
+                "gp1",
+                "--truncate",
+                "--config /home/aclydes/dev/pgsync/.pgsync-bulletin.yml"
+            ],
+            "askParameters": true
+        },
+    ]
+}

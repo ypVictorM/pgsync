@@ -1,0 +1,28 @@
+# source database URL
+# database URLs take the format of:
+#   postgres://user:password@host:port/dbname
+
+#
+# we recommend a command which outputs a database URL
+# so sensitive information is not included in this file
+#
+# we *highly recommend* you use sslmode=verify-full when possible
+# see https://ankane.org/postgres-sslmode-explained for more info
+from: postgres://postgres:password@127.0.0.1:5433/Bulletin-Source
+
+# destination database URL
+to: postgres://postgres:password@127.0.0.1:5433/Bulletin-UAT
+
+# exclude tables
+# exclude:
+#   - table1
+#   - table2
+
+# define groups
+groups:
+  gp1:
+    individu: "where tenant_id = 'a0bc8cff-6b48-4bf1-b020-88cd08e7d581'"
+
+# sync specific schemas
+schemas:
+  - public
