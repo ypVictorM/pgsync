@@ -453,3 +453,4 @@ createdb pgsync_test3
 
 bundle exec rake test
 ```
+
