@@ -21,7 +21,7 @@ to: postgres://postgres:password@127.0.0.1:5433/Bulletin-UAT
 # define groups
 groups:
   gp1:
-    individu: "where tenant_id = 'a0bc8cff-6b48-4bf1-b020-88cd08e7d581'"
+    individu: "where tenant_id = '{1}'"
 
 # sync specific schemas
 schemas:

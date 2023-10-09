@@ -7,10 +7,12 @@
 #
 # we *highly recommend* you use sslmode=verify-full when possible
 # see https://ankane.org/postgres-sslmode-explained for more info
-from: $(some_command)?sslmode=require
+# from: $(some_command)?sslmode=require
+from: postgres://postgres:password@127.0.0.1:5433/PgSync
 
 # destination database URL
-to: postgres://localhost:5432/myapp_development
+# # to: postgres://localhost:5432/myapp_development
+to: postgres://postgres:password@127.0.0.1:5433/PgSync2
 
 # exclude tables
 %{exclude}

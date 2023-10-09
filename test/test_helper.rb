@@ -8,7 +8,11 @@ require "tmpdir"
 require "open3"
 
 def connect(dbname)
-  conn = PG::Connection.open(dbname: dbname)
+  # puts "#{dbname}"
+  # conn = PG::Connection.new( "postgres://postgres:password@127.0.0.1:5433/#{dbname}" )
+  conn = PG::Connection.new( "postgres://postgres:password@localhost:5432/#{dbname}" )
+  
+  # conn = PG::Connection.open(dbname: dbname)
   conn.exec("SET client_min_messages TO WARNING")
   conn.type_map_for_results = PG::BasicTypeMapForResults.new(conn)
   conn.exec(File.read("test/support/schema#{dbname[-1]}.sql"))
@@ -17,6 +21,7 @@ end
 
 def conn1
   @conn1 ||= connect("pgsync_test1")
+  puts @conn1
 end
 
 def conn2

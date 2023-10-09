@@ -1,3 +1,5 @@
+# from: postgres://postgres:password@127.0.0.1:5433/pgsync_test1
+# to: postgres://postgres:password@127.0.0.1:5433/pgsync_test2
 from: $(echo "pgsync_test1")
 to: pgsync_test2
 groups:
